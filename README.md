@@ -29,16 +29,16 @@ Generate placeholder images using simple HTTP GET requests:
 
 ```bash
 # Basic 300x200 PNG
-http://localhost:8888/api/placeholder/300x200
+http://localhost:8080/api/placeholder/300x200
 
 # Custom colors and format
-http://localhost:8888/api/placeholder/400x300.jpg?bg=ff0000&fg=ffffff
+http://localhost:8080/api/placeholder/400x300.jpg?bg=ff0000&fg=ffffff
 
 # Custom text
-http://localhost:8888/api/placeholder/500x300?text=Hello%20World
+http://localhost:8080/api/placeholder/500x300?text=Hello%20World
 
 # Multiple parameters
-http://localhost:8888/api/placeholder/600x400.webp?bg=1e1e1e&fg=00ff00&text=Custom%20Image
+http://localhost:8080/api/placeholder/600x400.webp?bg=1e1e1e&fg=00ff00&text=Custom%20Image
 ```
 
 ## API Reference
@@ -139,22 +139,22 @@ go build -o placeholder
 
 ```bash
 # Test basic functionality
-curl http://localhost:8888/api/placeholder/300x200
+curl http://localhost:8080/api/placeholder/300x200
 
 # Test with parameters
-curl "http://localhost:8888/api/placeholder/400x300.jpg?bg=ff0000&fg=ffffff&text=Test"
+curl "http://localhost:8080/api/placeholder/400x300.jpg?bg=ff0000&fg=ffffff&text=Test"
 
 # Test Chinese text support
-curl "http://localhost:8888/api/placeholder/500x300?text=占位图&bg=1e1e1e&fg=ffffff"
-curl "http://localhost:8888/api/placeholder/400x200.png?text=测试中文&bg=0066cc&fg=ffffff"
-curl "http://localhost:8888/api/placeholder/350x250.webp?text=示例图片&bg=e91e63&fg=ffffff"
+curl "http://localhost:8080/api/placeholder/500x300?text=占位图&bg=1e1e1e&fg=ffffff"
+curl "http://localhost:8080/api/placeholder/400x200.png?text=测试中文&bg=0066cc&fg=ffffff"
+curl "http://localhost:8080/api/placeholder/350x250.webp?text=示例图片&bg=e91e63&fg=ffffff"
 
 # Test Japanese and Korean text
-curl "http://localhost:8888/api/placeholder/400x300?text=プレースホルダー&bg=2196f3&fg=ffffff"
-curl "http://localhost:8888/api/placeholder/350x200?text=플레이스홀더&bg=ff5722&fg=ffffff"
+curl "http://localhost:8080/api/placeholder/400x300?text=プレースホルダー&bg=2196f3&fg=ffffff"
+curl "http://localhost:8080/api/placeholder/350x200?text=플레이스홀더&bg=ff5722&fg=ffffff"
 
 # Test mixed text with emojis
-curl "http://localhost:8888/api/placeholder/500x300?text=🌟中文测试🎯&bg=4caf50&fg=ffffff"
+curl "http://localhost:8080/api/placeholder/500x300?text=🌟中文测试🎯&bg=4caf50&fg=ffffff"
 ```
 
 ## License
